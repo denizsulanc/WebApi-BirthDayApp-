@@ -1,0 +1,21 @@
+﻿@model BirthDayWeb.Models.DavetiyeModel
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<h1>Teşekkürler, @Model.Ad</h1>
+<hr />
+
+<div class="lead">
+    @if (Model.KatilmaDurumu == true)
+    {
+        @Model.Ad @:Gelmene çok sevindim :) Bütün hazırlıklar tamamlandı..!
+        @Html.Action("Katilanlar","Home") //Partial bir yapıdır
+    }
+    else
+    {
+        @Model.Ad @:Gelemeyecek olmana çok üzüldüm :( Bunu bildirdiğin için teşekkür ederim.
+    }
+</div>
+
+
